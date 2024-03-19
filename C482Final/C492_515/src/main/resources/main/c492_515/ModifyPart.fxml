@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="420.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.c492_515.Controller.ModifyPart">
+    <children>
+        <Text layoutX="14.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Modify Part">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font>
+        </Text>
+        <RadioButton fx:id="inHouse" layoutX="83.0" layoutY="50.0" mnemonicParsing="false" onAction="#onInHouse" selected="true" text="In-House">
+            <toggleGroup>
+                <ToggleGroup fx:id="addPartToggle" />
+            </toggleGroup></RadioButton>
+        <RadioButton fx:id="outsourced" layoutX="212.0" layoutY="50.0" mnemonicParsing="false" onAction="#onOutsourced" text="Outsourced" toggleGroup="$addPartToggle" />
+        <Text layoutX="77.0" layoutY="119.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ID" />
+        <TextField fx:id="id" disable="true" editable="false" layoutX="163.0" layoutY="102.0" text="Auto Generated" />
+        <Text layoutX="77.0" layoutY="162.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name" />
+        <TextField fx:id="name" layoutX="163.0" layoutY="145.0" />
+        <Text layoutX="77.0" layoutY="205.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Inventory" />
+        <TextField fx:id="stock" layoutX="163.0" layoutY="188.0" />
+        <Text layoutX="75.0" layoutY="249.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price/Cost" />
+        <TextField fx:id="price" layoutX="163.0" layoutY="232.0" promptText="Price/Cost per Unit" />
+        <Text layoutX="78.0" layoutY="291.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Min" />
+        <TextField fx:id="min" layoutX="118.0" layoutY="274.0" prefHeight="25.0" prefWidth="70.0" promptText="Min Inventory" />
+        <Text layoutX="212.0" layoutY="291.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Max" />
+        <TextField fx:id="max" layoutX="251.0" layoutY="274.0" prefHeight="25.0" prefWidth="92.0" promptText="Max Inventory" />
+        <Text fx:id="textSix" layoutX="78.0" layoutY="328.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Machine ID" />
+        <TextField fx:id="fieldSeven" layoutX="163.0" layoutY="311.0" promptText="Machine ID" />
+        <Button layoutX="334.0" layoutY="381.0" mnemonicParsing="false" onAction="#toMain" text="Cancel" />
+        <Button fx:id="savePart" layoutX="271.0" layoutY="381.0" mnemonicParsing="false" onAction="#save" text="Save" />
+    </children>
+</AnchorPane>
